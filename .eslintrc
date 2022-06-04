@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    "simple-import-sort",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint-config-ali/typescript/react",
+    "prettier"
+  ],
+  "rules": {
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react"],
+          ["^"],
+          ["^@"],
+          [
+            "^@/pages",
+            "^@/components"
+          ],
+          ["^\\."],
+          ["^\\u0000"]
+        ]
+      }
+    ],
+    "react/no-array-index-key": 0,
+    "no-console": 0
+  }
+}
